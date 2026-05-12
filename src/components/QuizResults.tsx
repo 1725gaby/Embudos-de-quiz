@@ -30,10 +30,16 @@ export function QuizResults() {
   };
 
   const ctaButton = (
+  <a
+    href="https://pay.hotmart.com/C105635039U?checkoutMode=10"
+    target="_blank"
+    rel="noopener noreferrer"
+  >
     <button className="w-full bg-[#2f5d3a] hover:bg-[#26472b] text-white py-5 px-4 rounded-full font-bold flex items-center justify-center gap-2 transition-all active:scale-95 shadow-lg shadow-[#2f5d3a]/20 mb-6 group whitespace-nowrap" style={{ fontSize: '18px', lineHeight: '24px' }}>
       QUIERO EMPEZAR 🥰
       <ArrowRight className="w-6 h-6 transition-transform group-hover:translate-x-1" />
     </button>
+  </a>
   );
 
   const faqs = [
