@@ -299,10 +299,16 @@ export function QuizResults() {
 
           {/* 13. CTA FINAL */}
           <div className="px-0 pt-6">
-            <button className="w-full text-white py-6 px-4 rounded-full font-black flex items-center justify-center gap-3 transition-all active:scale-95 shadow-xl shadow-[#2f5d3a]/20 group whitespace-nowrap" style={{ backgroundColor: '#2f5d3a', fontSize: '18px' }}>
-              QUIERO EMPEZAR 🥰
-              <ArrowRight className="w-7 h-7" />
-            </button>
+            <a
+               href="https://pay.hotmart.com/C105635039U?checkoutMode=10"
+               target="_blank"
+               rel="noopener noreferrer"
+            >
+              <button className="w-full text-white py-6 px-4 rounded-full font-black flex items-center justify-center gap-3 transition-all active:scale-95 shadow-xl shadow-[#2f5d3a]/20 group whitespace-nowrap" style={{ backgroundColor: '#2f5d3a', fontSize: '18px' }}>
+                QUIERO EMPEZAR 🥰
+                <ArrowRight className="w-7 h-7" />
+              </button>
+            </a>
             <p className="text-center text-xs text-gray-400 mt-6 flex items-center justify-center gap-1">
               <ShieldCheck className="w-3 h-3" /> Pago 100% seguro y encriptado
             </p>
