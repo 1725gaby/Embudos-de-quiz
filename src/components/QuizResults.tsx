@@ -167,7 +167,7 @@ export function QuizResults() {
                 className="font-bold"
                 style={{ fontSize: '15px', lineHeight: '19.6667px' }}
               >
-                Receta con Chia + Protocolo completo
+                Recetas con Chia + Protocolo completo + Detox Anti-inflamatorio
               </h3>
               <p 
                 className="font-bold uppercase tracking-widest"
@@ -183,14 +183,37 @@ export function QuizResults() {
             </div>
             <ul className="space-y-4">
               {[
-                "Recetas con Chía para reducir medidas",
-                "Protocolo Completo de 21 Días paso a paso",
-                "Lista de ingredientes y método de preparacion",
-                "App Exclusiva con acceso vitalicio"
-              ].map((text, i) => (
-                <li key={i} className="flex items-start gap-3">
-                  <CheckCircle2 className="w-5 h-5 mt-0.5 shrink-0" style={{ color: '#2f5d3a' }} />
-                  <span className="font-medium text-gray-700" style={{ fontSize: '13px' }}>{text}</span>
+                {
+                  title: "Detox Anti-inflamatorio",
+                  desc: "Diseñado para ayudarte a reducir inflamación, eliminar exceso de líquidos y preparar tu cuerpo antes de comenzar el proceso de pérdida de grasa."
+                },
+                {
+                  title: "Recetas con Chía para reducir medidas",
+                  desc: "Recibe recetas prácticas y fáciles de preparar que aprovechan las propiedades de la chía para aumentar la saciedad, ayudar al control del apetito."
+                },
+                {
+                  title: "Protocolo Completo de 21 Días paso a paso",
+                  desc: "Un sistema organizado día por día para acompañarte durante todo el proceso, facilitando la implementación de hábitos sostenibles."
+                },
+                {
+                  title: "Lista de ingredientes y método de preparación",
+                  desc: "Todo organizado de forma simple para evitar confusión, ahorrar tiempo y facilitar la preparación diaria de tus comidas, incluso si tienes poco tiempo disponible."
+                },
+                {
+                  title: "App Exclusiva con acceso vitalicio",
+                  desc: "Accede a tu contenido desde cualquier dispositivo, revisa recetas y protocolos cuando quieras y mantén tus recursos disponibles sin límites de tiempo."
+                }
+              ].map((item, i) => (
+                <li key={i} className="flex flex-col gap-1">
+                  <div className="flex items-start gap-3">
+                    <CheckCircle2 className="w-5 h-5 mt-0.5 shrink-0" style={{ color: '#2f5d3a' }} />
+                    <span className="font-bold text-gray-800" style={{ fontSize: '14px' }}>{item.title}</span>
+                  </div>
+                  <div className="pl-8">
+                    <p className="text-gray-500 font-medium" style={{ fontSize: '13px', lineHeight: '18px' }}>
+                      {item.desc}
+                    </p>
+                  </div>
                 </li>
               ))}
             </ul>
@@ -198,17 +221,31 @@ export function QuizResults() {
 
           {/* 6. BLOQUE BONOS */}
           <section className="border-2 border-dashed border-gray-200 px-3 py-6 rounded-3xl space-y-4 bg-[#FAFAFA]">
-            <div className="flex flex-col items-center gap-4">
+            <div className="flex flex-col gap-4">
               {[
-                "Bonus: 20 batidos para acelerar resultados",
-                "Bonus: 20 desayunos rápidos y saludables",
-                "Bonus: 20 postres sin azúcar para eliminar la ansiedad"
-              ].map((text, i) => (
-                <div key={i} className="flex items-center gap-3 w-full">
+                {
+                  title: "BONUS: 20 Batidos para acelerar resultados",
+                  desc: "Opciones rápidas y nutritivas para complementar tu alimentación diaria."
+                },
+                {
+                  title: "BONUS: 20 Desayunos rápidos y saludables",
+                  desc: "Ideas prácticas para comenzar el día con comidas más equilibradas."
+                },
+                {
+                  title: "BONUS: 20 Postres sin azúcar para eliminar la ansiedad",
+                  desc: "Alternativas dulces diseñadas para ayudarte a controlar antojos."
+                }
+              ].map((item, i) => (
+                <div key={i} className="flex items-center gap-3 w-full text-left">
                   <div className="w-11 h-11 bg-white rounded-xl shadow-sm flex items-center justify-center text-xl shrink-0">
                     🎁
                   </div>
-                  <p className="text-gray-700 flex-1" style={{ fontSize: '13px', fontWeight: 'normal' }}>{text}</p>
+                  <div className="flex flex-col justify-center">
+                    <span className="font-bold text-gray-800 block" style={{ fontSize: '14px', lineHeight: '1.1' }}>{item.title}</span>
+                    <p className="text-gray-500 font-medium mt-0.5" style={{ fontSize: '12.5px', lineHeight: '1.2' }}>
+                      {item.desc}
+                    </p>
+                  </div>
                 </div>
               ))}
             </div>
