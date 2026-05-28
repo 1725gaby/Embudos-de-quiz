@@ -185,11 +185,11 @@ export function QuizResults() {
               {[
                 {
                   title: "Detox Anti-inflamatorio",
-                  desc: "Diseñado para ayudarte a reducir inflamación, eliminar exceso de líquidos y preparar tu cuerpo antes de comenzar el proceso de pérdida de grasa."
+                  desc: "Reduce la inflamación, elimina el exceso de líquidos y preparar tu cuerpo antes de comenzar el proceso de pérdida de grasa."
                 },
                 {
                   title: "Recetas con Chía para reducir medidas",
-                  desc: "Recibe recetas prácticas y fáciles de preparar que aprovechan las propiedades de la chía para aumentar la saciedad, ayudar al control del apetito."
+                  desc: "Recibe recetas prácticas y fáciles de preparar que aprovechan las propiedades de la chía para aumentar la saciedad, ayudando al control del apetito."
                 },
                 {
                   title: "Protocolo Completo de 21 Días paso a paso",
@@ -197,11 +197,11 @@ export function QuizResults() {
                 },
                 {
                   title: "Lista de ingredientes y método de preparación",
-                  desc: "Todo organizado de forma simple para evitar confusión, ahorrar tiempo y facilitar la preparación diaria de tus comidas, incluso si tienes poco tiempo disponible."
+                  desc: "Todo organizado de forma simple, ahorra tiempo y facilita la preparación diaria de tus comidas."
                 },
                 {
                   title: "App Exclusiva con acceso vitalicio",
-                  desc: "Accede a tu contenido desde cualquier dispositivo, revisa recetas y protocolos cuando quieras y mantén tus recursos disponibles sin límites de tiempo."
+                  desc: "Accede a tu contenido desde cualquier dispositivo, revisa y mantén tus recursos disponibles sin límites de tiempo."
                 }
               ].map((item, i) => (
                 <li key={i} className="flex flex-col gap-1">
