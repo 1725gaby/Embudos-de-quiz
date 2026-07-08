@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+*import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
 import { 
   CheckCircle2, 
@@ -12,6 +12,31 @@ import {
   Star,
   Smartphone
 } from 'lucide-react';
+
+function buildHotmartUrl(baseUrl: string) {
+  if (typeof window === 'undefined') return baseUrl;
+
+  const currentParams = new URLSearchParams(window.location.search);
+  const paramsToForward = [
+    'fbclid',
+    'utm_source',
+    'utm_medium',
+    'utm_campaign',
+    'utm_content',
+    'utm_term',
+  ];
+
+  const url = new URL(baseUrl);
+
+  paramsToForward.forEach((param) => {
+    const value = currentParams.get(param);
+    if (value) {
+      url.searchParams.set(param, value);
+    }
+  });
+
+  return url.toString();
+}
 
 export function QuizResults() {
   const [timeLeft, setTimeLeft] = useState(531); // 08:51 in seconds
@@ -31,7 +56,7 @@ export function QuizResults() {
 
   const ctaButton = (
   <a
-    href="https://pay.hotmart.com/C105635039U?checkoutMode=10"
+    href={buildHotmartUrl('https://pay.hotmart.com/C105635039U?checkoutMode=10')}
     target="_blank"
     rel="noopener noreferrer"
   >
@@ -337,7 +362,7 @@ export function QuizResults() {
           {/* 13. CTA FINAL */}
           <div className="px-0 pt-6">
             <a
-               href="https://pay.hotmart.com/C105635039U?checkoutMode=10"
+               href={buildHotmartUrl('https://pay.hotmart.com/C105635039U?checkoutMode=10')}
                target="_blank"
                rel="noopener noreferrer"
             >
@@ -356,3 +381,4 @@ export function QuizResults() {
     </div>
   );
 }
+
